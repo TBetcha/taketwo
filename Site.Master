@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="taketwo.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+       <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <a href="/" rel="noopener
+				" class="navbar-brand"><img src="img/mylogo.jpeg" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a href="/index" rel="noopener" class="nav-link">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="https://mantis3dprinter.com/" rel="noopener" class="nav-link">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a href="/about" rel="noopener" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link" rel="noopener">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="/deals" class="nav-link" rel="noopener">Top Deals</a>
+            </li>
+            <li class="nav-item">
+              <a href="/loan" class="nav-link" rel="noopener">Loan Calculator</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+      <footer>
+                  <div class="container-fluid padding">
+        <div class="row text-center" id="contact">
+          <div class="col-md-12 center">
+            <hr>
+            <h4 class="text-danger">1-800-DRIVEME</h4>
+            <h5 class="text-danger">Helpme@Troyscarshop.com</h5>
+            <title>Call us!</title>
+            <table class="table table-hover-dark">
+
+              <tr colspan=8>
+                <td colspan="2">Monday</td>
+                <td colspan="1">-</td>
+                <td colspan="2">Friday</td>
+                <td colspan="1"></td>
+                <td colspan="1">Saturday</td>
+                <td colspan="1">Sunday</td>
+              </tr>
+              <tr colspan="7">
+                <td colspan="5">7:00 am - 9:00 pm EST</td>
+                <td colspan="1"> </td>
+                <td colspan="1">9:00 am - 7:00 pm</td>
+                <td>CLOSED</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      </div>
+    </footer>
+       
+    </form>
+</body>
+</html>

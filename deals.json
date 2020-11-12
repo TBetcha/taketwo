@@ -1,0 +1,180 @@
+{
+  "sales": {
+    "Listing": {
+      "Car": ["Audi A6", "Jaguar XKR", "Lincoln MKZ", "Mercedes AMG C 43"],
+      "SUV": ["Land Rover Range Rover", "Ford Expedition", "GMC Yukon", "BMW X5"],
+      "Truck": ["Toyota Tacoma", "Ford F-150", "Ford F-150 Raptor", "Dodge Ram"],
+      "Van": ["Ford Transit", "Ford E-350", "Mercedes-Benz Sprinter", "Dodge ProMaster"]
+    },
+    "Details": {
+      "Car": {
+        "Audi A6": {
+          "Name": "Audi A6",
+          "Price": "55000",
+          "Mileage": "870",
+          "Year": "2020",
+          "Color": "Silver",
+          "Location": "Albany, NY",
+          "img": "./img/deals/audia6.jpg",
+          "Type": "car"
+        },
+        "Jaguar XKR": {
+          "Name": "Jaguar XKR",
+          "Price": "76000",
+          "Mileage": "650",
+          "Year": "2020",
+          "Color": "White",
+          "Location": "Boca Raton, FL",
+          "img": "./img/deals/jaguar-xk.jpg",
+          "Type": "car"
+        },
+        "Lincoln MKZ": {
+          "Name": "Lincoln MKZ",
+          "Price": "21500",
+          "Mileage": "52000",
+          "Year": "2016",
+          "Color": "Black",
+          "Location": "St. Paul, MN",
+          "img": "./img/deals/mkz.jpg",
+          "Type": "car"
+        },
+        "Mercedes AMG C 43": {
+          "Name": "Mercedes AMG C 43",
+          "Price": "49999",
+          "Mileage": "14600",
+          "Year": "2019",
+          "Color": "White",
+          "Location": "Sacramento, CA",
+          "img": "./img/deals/benzc43.jpg",
+          "Type": "car"
+        }
+      },
+      "SUV": {
+        "Land Rover Range Rover": {
+          "Name": "Land Rover Range Rover",
+          "Price": "33700",
+          "Mileage": "39000",
+          "Year": "2016",
+          "Color": "White",
+          "Location": "Morristown, NJ",
+          "img": "./img/deals/range.jpg",
+          "Type": "SUV"
+        },
+        "Ford Expedition": {
+          "Name": "Ford Expedition",
+          "Price": "39700",
+          "Mileage": "8500",
+          "Year": "2019",
+          "Color": "Beige",
+          "Location": "Scranton, PA",
+          "img": "./img/deals/expedition.jpg",
+          "Type": "SUV"
+        },
+        "GMC Yukon": {
+          "Name": "GMC Yukon",
+          "Price": "51425",
+          "Mileage": "270",
+          "Year": "2020",
+          "Color": "White",
+          "Location": "Albany, NY",
+          "img": "./img/deals/yukon.jpg",
+          "Type": "SUV"
+        },
+        "BMW X5": {
+          "Name": "BMW X5",
+          "Price": "40900",
+          "Mileage": "22000",
+          "Year": "2018",
+          "Color": "Navy Blue",
+          "Location": "Omaha, NE",
+          "img": "./img/deals/x5.jpg",
+          "Type": "BMW X5"
+        }
+      },
+      "Truck": {
+        "Toyota Tacoma": {
+          "Name": "Toyota Tacoma",
+          "Price": "48795",
+          "Mileage": "1100",
+          "Year": "2020",
+          "Color": "Black",
+          "Location": "Albany, NY",
+          "img": "./img/deals/tacoma.jpg",
+          "Type": "truck"
+        },
+        "Ford F-150": {
+          "Name": "Ford F-150",
+          "Price": "36000",
+          "Mileage": "400",
+          "Year": "2020",
+          "Color": "Silver ",
+          "Location": "Memphis, TN",
+          "img": "./img/deals/f150.png",
+          "Type": "truck"
+        },
+        "Ford F-150 Raptor": {
+          "Name": "Ford F-150 Raptor",
+          "Price": "70700",
+          "Mileage": "300",
+          "Year": "2020",
+          "Color": "Navy Blue",
+          "Location": "Denver, CO",
+          "img": "./img/deals/raptor.png",
+          "Type": "truck"
+        },
+        "Dodge Ram": {
+          "Name": "Dodge Ram",
+          "Price": "14600",
+          "Mileage": "95000",
+          "Year": "2007",
+          "Color": "Silver",
+          "Location": "San Diego, CA",
+          "img": "./img/deals/ram.png",
+          "Type": "truck"
+        }
+      },
+      "Van": {
+        "Ford Transit": {
+          "Name": "Ford Transit",
+          "Price": "21500",
+          "Mileage": "54000",
+          "Year": "2016",
+          "Color": "White",
+          "Location": "Brooklyn, NY",
+          "img": "./img/deals/transit.jpg",
+          "Type": "van"
+        },
+        "Ford E-350": {
+          "Name": "Ford E-350",
+          "Price": "8800",
+          "Mileage": "98000",
+          "Year": "2010",
+          "Color": "White",
+          "Location": "Austin, TX",
+          "img": "./img/deals/e350.jpg",
+          "Type": "van"
+        },
+        "Mercedes-Benz Sprinter": {
+          "Name": "Mercedes-Benz Sprinter",
+          "Price": "43000",
+          "Mileage": "1050",
+          "Year": "2020",
+          "Color": "Silver",
+          "Location": "Columbia, OH",
+          "img": "./img/deals/sprinter.jpg",
+          "Type": "van"
+        },
+        "Dodge ProMaster": {
+          "Name": "Dodge ProMaster",
+          "Price": "13400",
+          "Mileage": "61000",
+          "Year": "2015",
+          "Color": "Silver",
+          "Location": "Houston, TX",
+          "img": "./img/deals/promaster.png",
+          "Type": "van"
+        }
+      }
+    }
+  }
+}
