@@ -15,7 +15,7 @@ namespace taketwo
         {
             if (!IsPostBack)
             {
-                string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\Mac\Home\Documents\Carshop.accdb;Persist Security Info=False;";
+                string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\troyboettger\source\repos\taketwo\App_Data\Carshop.accdb;Persist Security Info=True;";
 
                 using (OleDbConnection con = new OleDbConnection(connectionString))
                 {
@@ -28,7 +28,7 @@ namespace taketwo
                     da.Fill(ds);
 
                     Sales.DataSource = ds.Tables[0];
-                    Sales.DataValueField = "ID"; // Value Field
+                    Sales.DataValueField = "Price"; // Value Field
                     Sales.DataTextField = "Model"; // Text field which will be show in UI
                     Sales.DataBind();
                 }

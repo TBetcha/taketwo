@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
+    <Content Include="App_Data\Carshop.accdb" />
     <Content Include="img\deals\audia6.jpg" />
     <Content Include="img\benzamg.jpg" />
     <Content Include="img\deals\benzc43.jpg" />
@@ -278,9 +279,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />

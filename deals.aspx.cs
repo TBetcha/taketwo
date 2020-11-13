@@ -15,12 +15,13 @@ namespace taketwo
         {
             if (!IsPostBack)
             {
-                string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\Mac\Home\Documents\Carshop.accdb;Persist Security Info=False;";
+                string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\troyboettger\source\repos\taketwo\App_Data\Carshop.accdb;Persist Security Info=True;";
+
 
                 using (OleDbConnection con = new OleDbConnection(connectionString))
                 {
                     //Open Database Connection
-                    OleDbDataAdapter da = new OleDbDataAdapter("SELECT DISTINCT * FROM Sales", con);
+                    OleDbDataAdapter da = new OleDbDataAdapter("SELECT DISTINCT [Type] FROM Sales", con);
 
                     DataSet ds = new DataSet();
 
@@ -28,7 +29,7 @@ namespace taketwo
                     da.Fill(ds);
 
                     Sales.DataSource = ds.Tables[0];
-                    Sales.DataValueField = "ID"; // Value Field
+                    Sales.DataValueField = "Type"; // Value Field
                     Sales.DataTextField = "Type"; // Text field which will be show in UI
                     Sales.DataBind();
                 }
