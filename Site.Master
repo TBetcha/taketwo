@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> Troy's Car Shop</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -54,7 +54,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="https://mantis3dprinter.com/" rel="noopener" class="nav-link">Shop</a>
+              <a href="/shop" rel="noopener" class="nav-link">Shop</a>
             </li>
             <li class="nav-item">
               <a href="/about" rel="noopener" class="nav-link">About</a>

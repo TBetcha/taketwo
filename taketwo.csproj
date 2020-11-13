@@ -140,6 +140,7 @@
     <Content Include="img\deals\transit.jpg" />
     <Content Include="img\deals\x5.jpg" />
     <Content Include="img\deals\yukon.jpg" />
+    <Content Include="img\prod\shopnow.png" />
     <Content Include="loan.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -203,6 +204,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="img\shop.png" />
+    <Content Include="shop.aspx" />
     <Content Include="Site.Master" />
     <Content Include="img\twentyfive.png" />
     <Content Include="img\usedbmw.jpg" />
@@ -247,6 +249,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="shop.aspx.cs">
+      <DependentUpon>shop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shop.aspx.designer.cs">
+      <DependentUpon>shop.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
