@@ -47,9 +47,19 @@
             <br>
             <div class="collapse" id="collapseExample">
               <div class="card card-body">
-                <select class="form-control" id="topDealSelect">
+             <!--   <select class="form-control" id="topDealSelect">
                   <option>-</option>
-                </select>
+                </select> !-->
+
+              <div>
+			<asp:DropDownList ID="Sales" runat="server">
+				<asp:ListItem>Car</asp:ListItem>
+				<asp:ListItem>Truck</asp:ListItem>
+				<asp:ListItem>Van</asp:ListItem>
+			</asp:DropDownList>
+			
+            </div>
+
               </div>
             </div>
             <div class="form-group">
