@@ -29,8 +29,17 @@
 		<hr>
 		<div class="container-fluid text-center">
 			<h2 class="display-4">Search for your next bargain</h2>
+			
+            <div>
+			<asp:DropDownList ID="Sales" runat="server">
+				<asp:ListItem>Car</asp:ListItem>
+				<asp:ListItem>Truck</asp:ListItem>
+				<asp:ListItem>Van</asp:ListItem>
+			</asp:DropDownList>
+			
+            </div>
 
-			<div class="dropdown">
+ <!--			<div class="dropdown">
 				<select id="dropdown-me" aria-labelledby="dropdownMenuButton">
 
 					<option class="dropdown-item" value="all" href="#" selected="selected">All</option>
@@ -42,6 +51,7 @@
 				</select>
 			</div>
 		</div>
+	   !-->
 		<hr>
 
 		<!-- cards row Car-->
