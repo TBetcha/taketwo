@@ -22,6 +22,52 @@
       </div>
     </div>
 
+    <!--Select -->
+      <div class="collapse" id="collapseExample">
+         <div class="card card-body">
+          <div>
+            <asp:DropDownList ID="Sales" runat="server">
+				<asp:ListItem>Car</asp:ListItem>
+				<asp:ListItem>Truck</asp:ListItem>
+				<asp:ListItem>Van</asp:ListItem>
+			</asp:DropDownList>
+           </div>
+         </div>
+       </div>
+
+    <!--Select -->
+
+
+    <!--Gridview -->
+   
+    <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" Width="502px" DataKeyNames="ID">
+        <Columns>
+            <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" Visible="False" />
+            <asp:BoundField DataField="Yr" HeaderText="Yr" SortExpression="Yr" />
+            <asp:BoundField DataField="Make" HeaderText="Make" SortExpression="Make" />
+            <asp:BoundField DataField="Model" HeaderText="Model" SortExpression="Model" />
+            <asp:BoundField DataField="Mileage" HeaderText="Mileage" SortExpression="Mileage" />
+            <asp:BoundField DataField="Color" HeaderText="Color" SortExpression="Color" />
+            <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
+            <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
+            <asp:ImageField>
+            </asp:ImageField>
+        </Columns>
+        <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
+        <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
+        <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
+        <RowStyle BackColor="White" ForeColor="#330099" />
+        <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="#663399" />
+        <SortedAscendingCellStyle BackColor="#FEFCEB" />
+        <SortedAscendingHeaderStyle BackColor="#AF0101" />
+        <SortedDescendingCellStyle BackColor="#F6F0C0" />
+        <SortedDescendingHeaderStyle BackColor="#7E0000" />
+    </asp:GridView>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT [ID], [Make], [Model], [Yr], [Mileage], [Color], [Price], [Type] FROM [Sales]"></asp:SqlDataSource>
+    <!--Gridview -->
+
+
+
     <!--scripts -->
     <!--scripts -->
 
