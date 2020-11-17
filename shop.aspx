@@ -49,8 +49,8 @@
             <asp:BoundField DataField="Color" HeaderText="Color" SortExpression="Color" />
             <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
             <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
-            <asp:BoundField DataField="Picture" HeaderText="Picture" SortExpression="Picture" />
-           <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" /> 
+            <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
+           <asp:BoundField DataField="Picture" HeaderText="Picture" SortExpression="Picture" /> 
         </Columns>
         <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
         <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
@@ -65,33 +65,28 @@
     <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource2" Height="50px" Width="125px" DataKeyNames="ID">
         <Fields>
             <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" />
-            <asp:BoundField DataField="Model" HeaderText="Model" SortExpression="Model" />
             <asp:BoundField DataField="Make" HeaderText="Make" SortExpression="Make" />
+            <asp:BoundField DataField="Model" HeaderText="Model" SortExpression="Model" />
             <asp:BoundField DataField="Yr" HeaderText="Yr" SortExpression="Yr" />
             <asp:BoundField DataField="Mileage" HeaderText="Mileage" SortExpression="Mileage" />
             <asp:BoundField DataField="Color" HeaderText="Color" SortExpression="Color" />
             <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
             <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
             <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
-            <asp:TemplateField HeaderText="Picture">
+           <asp:TemplateField HeaderText="Image" >
                 <ItemTemplate>
-                    <asp:Image ID="Image1" ImageUrl='<%#(string) FormatUrl((string)"Picture") %>' runat="server" />
+                    <asp:Image ID="Image1" runat="server" ImageUrl='<%# (string) FormatUrl((string)Eval("Picture")) %>' />
                 </ItemTemplate>
             </asp:TemplateField>
 
-
-            <asp:ImageField DataImageUrlField="Picture">
-            </asp:ImageField>
-
-
         </Fields>
     </asp:DetailsView>
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString14 %>" ProviderName="<%$ ConnectionStrings:ConnectionString14.ProviderName %>" SelectCommand="SELECT [ID], [Model], [Make], [Yr], [Mileage], [Color], [Type], [Location], [Price], [Picture] FROM [Sales] WHERE ([ID] = ?)">
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString18 %>" ProviderName="<%$ ConnectionStrings:ConnectionString18.ProviderName %>" SelectCommand="SELECT [ID], [Make], [Model], [Yr], [Mileage], [Color], [Type], [Location], [Price], [Picture] FROM [Sales] WHERE ([ID] = ?)">
         <SelectParameters>
             <asp:ControlParameter ControlID="GridView1" Name="ID" PropertyName="SelectedValue" Type="Int32" />
         </SelectParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString13 %>" ProviderName="<%$ ConnectionStrings:ConnectionString13.ProviderName %>" SelectCommand="SELECT [ID], [Make], [Model], [Yr], [Mileage], [Color], [Type], [Location], [Picture], [Price] FROM [Sales] WHERE ([Type] = ?)">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString17 %>" ProviderName="<%$ ConnectionStrings:ConnectionString17.ProviderName %>" SelectCommand="SELECT [ID], [Make], [Model], [Yr], [Mileage], [Color], [Type], [Location], [Price], [Picture] FROM [Sales] WHERE ([Type] = ?)">
         <SelectParameters>
             <asp:ControlParameter ControlID="DropDownList1" Name="Type" PropertyName="SelectedValue" Type="String" DefaultValue="Car" />
         </SelectParameters>
