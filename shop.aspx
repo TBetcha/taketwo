@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#"  MasterPageFile="~/Site.Master"  AutoEventWireup="true" CodeBehind="shop.aspx.cs" Inherits="taketwo.shop" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-<!DOCTYPE html>
+    <!DOCTYPE html>
 
   <head>
     <meta charset="UTF-8" />
@@ -41,14 +41,15 @@
     <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" Width="502px" DataKeyNames="ID">
         <Columns>
             <asp:CommandField ShowSelectButton="True" />
-            <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" Visible="False" />
+            <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
+            <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" />
             <asp:BoundField DataField="Make" HeaderText="Make" SortExpression="Make" />
             <asp:BoundField DataField="Model" HeaderText="Model" SortExpression="Model" />
-            <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
             <asp:BoundField DataField="Yr" HeaderText="Yr" SortExpression="Yr" />
             <asp:BoundField DataField="Mileage" HeaderText="Mileage" SortExpression="Mileage" />
-            <asp:BoundField DataField="Color" HeaderText="Color" SortExpression="Color" Visible="False" />
-            <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" Visible="False" />
+            <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
+            <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
+            <asp:BoundField DataField="Color" HeaderText="Color" SortExpression="Color" />
         </Columns>
         <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
         <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
@@ -60,24 +61,30 @@
         <SortedDescendingCellStyle BackColor="#F6F0C0" />
         <SortedDescendingHeaderStyle BackColor="#7E0000" />
     </asp:GridView>
-    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource2" Height="50px" Width="125px">
+    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource2" Height="50px" Width="125px" DataKeyNames="ID">
         <Fields>
-            <asp:BoundField DataField="Yr" HeaderText="Yr" SortExpression="Yr" />
-            <asp:BoundField DataField="Mileage" HeaderText="Mileage" SortExpression="Mileage" />
+            <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" />
             <asp:BoundField DataField="Make" HeaderText="Make" SortExpression="Make" />
             <asp:BoundField DataField="Model" HeaderText="Model" SortExpression="Model" />
+            <asp:BoundField DataField="Yr" HeaderText="Yr" SortExpression="Yr" />
+            <asp:BoundField DataField="Mileage" HeaderText="Mileage" SortExpression="Mileage" />
             <asp:BoundField DataField="Color" HeaderText="Color" SortExpression="Color" />
+            <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
             <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
             <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
-            <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" ValidateRequestMode="Enabled" />
+            <asp:TemplateField HeaderText="Picture" >
+                  <ItemTemplate>
+                    <asp:Image ID="Image1" runat="server" ImageUrl='<%# (string) Eval("Picture") %>'></asp:Image>
+            </ItemTemplate>
+               </asp:TemplateField>
         </Fields>
     </asp:DetailsView>
-    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString4 %>" ProviderName="<%$ ConnectionStrings:ConnectionString4.ProviderName %>" SelectCommand="SELECT [ID], [Make], [Model], [Yr], [Mileage], [Color], [Type], [Location], [Price], [Field1] FROM [Sales] WHERE ([ID] = ?)">
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString10 %>" ProviderName="<%$ ConnectionStrings:ConnectionString10.ProviderName %>" SelectCommand="SELECT [ID], [Make], [Model], [Yr], [Mileage], [Color], [Type], [Location], [Price], [Picture] FROM [Sales] WHERE ([ID] = ?)">
         <SelectParameters>
             <asp:ControlParameter ControlID="GridView1" Name="ID" PropertyName="SelectedValue" Type="Int32" />
         </SelectParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString4 %>" ProviderName="<%$ ConnectionStrings:ConnectionString4.ProviderName %>" SelectCommand="SELECT [Type], [ID], [Make], [Model], [Yr], [Mileage], [Price] FROM [Sales] WHERE ([Type] = ?)">
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString7 %>" ProviderName="<%$ ConnectionStrings:ConnectionString7.ProviderName %>" SelectCommand="SELECT [Type], [ID], [Make], [Model], [Yr], [Mileage], [Price], [Location], [Color], [Picture] FROM [Sales] WHERE ([Type] = ?)">
         <SelectParameters>
             <asp:ControlParameter ControlID="DropDownList1" Name="Type" PropertyName="SelectedValue" Type="String" DefaultValue="Car" />
         </SelectParameters>
