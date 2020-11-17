@@ -17,6 +17,10 @@ namespace taketwo
         {
         }
 
+        protected string FormatUrl(string url)
+        {
+            return ("@~/" + url);
+        }
 
     }
 }
