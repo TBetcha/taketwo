@@ -209,8 +209,6 @@
     <Content Include="img\woman-five.jpg" />
     <Content Include="img\woman-two.jpg" />
     <Content Include="deals.json" />
-    <Content Include="package.json" />
-    <Content Include="webpack.config.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="img\man-three.jpg" />
     <Content Include="img\man-two.jpg" />
