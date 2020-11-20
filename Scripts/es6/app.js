@@ -1,6 +1,6 @@
 ﻿let topDeals;
 let reqItem;
-let reqItemList
+let reqItemList;
 
 //initially fetch json data
 const onLoad = async (file) => {
@@ -8,7 +8,7 @@ const onLoad = async (file) => {
         response.json().then(data => {
             topDeals = data.sales;
         })
-    })
+        })
 }
 
 //basic dom manipulation functions
@@ -67,4 +67,4 @@ const appendResult = () => {
 
 document.getElementById("dropdown-me").addEventListener("change", filterResults)
 
-onLoad('./deals.json')
+onLoad('../../deals.json')

@@ -11,7 +11,7 @@
 		<script src="https://kit.fontawesome.com/572a14277e.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="main.css" />
 		<title>Troy's Car Shop</title>
-</head>
+	</head>
 <body>
    <form id="form1" > 
 
@@ -30,16 +30,22 @@
 		<div class="container-fluid text-center">
 			<h2 class="display-4">Search for your next bargain</h2>
 			
-            <div>
-			<asp:DropDownList ID="Sales" runat="server">
-				<asp:ListItem>Car</asp:ListItem>
-				<asp:ListItem>Truck</asp:ListItem>
-				<asp:ListItem>Van</asp:ListItem>
+     <!--       <div>
+			<asp:DropDownList ID="Sales" runat="server" AutoPostBack=true>
+				<asp:ListItem Value="Car">Car</asp:ListItem>
+				<asp:ListItem Value="Truck">Truck</asp:ListItem>
+				<asp:ListItem Value="Van">Van</asp:ListItem>
+				<asp:ListItem Value="SUV">SUV</asp:ListItem>
 			</asp:DropDownList>
+				<script type ="text/javascript">
+					function	_doPostBack(){
+					filterRestults(ds)
+					}
+                </script>
 			
-            </div>
+            </div> !-->
 
- <!--			<div class="dropdown">
+ 			<div class="dropdown">
 				<select id="dropdown-me" aria-labelledby="dropdownMenuButton">
 
 					<option class="dropdown-item" value="all" href="#" selected="selected">All</option>
@@ -49,9 +55,14 @@
 					<option class="dropdown-item" href="#" value="Van">Van</option>
 
 				</select>
+	<!--			 <script type="text/javascript">
+					function _doPostBack(){
+						 filterResults($('#dropdown-me').val())
+					 }
+                 </script> -->
 			</div>
 		</div>
-	   !-->
+	   
 		<hr>
 
 		<!-- cards row Car-->
@@ -339,7 +350,7 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
 			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
 			crossorigin="anonymous"></script>
-		<script src="app.js"></script>
+		<script src="Scripts/es6/app.js" type="text/javascript"></script>
 	 <script src="deals.json"></script>
 </body>
 </html>
