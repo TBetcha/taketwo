@@ -109,6 +109,5 @@
     </footer>
        
     </form>
-    <script src="~/Scripts/build/bundle.js"></script>
 </body>
 </html>

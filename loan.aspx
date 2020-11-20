@@ -45,21 +45,20 @@
             </a>
             <br>
             <br>
-            <div class="collapse" id="collapseExample">
+              <div class="collapse" id="collapseExample">
               <div class="card card-body">
-             <!--   <select class="form-control" id="topDealSelect">
+                <select id="topDealSelect">
                   <option>-</option>
-                </select> !-->
+                  <option value="Ford Transit">Ford Transit</option>
+                </select>		
 
-              <div>
-			<asp:DropDownList ID="Sales" runat="server">
+       
+   <!--   			<asp:DropDownList ID="Sales" runat="server">
 				<asp:ListItem>Car</asp:ListItem>
 				<asp:ListItem>Truck</asp:ListItem>
 				<asp:ListItem>Van</asp:ListItem>
 			</asp:DropDownList>
-			
-            </div>
-
+	-->
               </div>
             </div>
             <div class="form-group">
@@ -124,8 +123,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"></script>
-    <script src="loan.js"></script>
-      <script src="deals.json"></script>
+    	<script src="Scripts/es6/loan.js" type="text/javascript"></script>
+	 <script src="deals.json"></script>
   </body>
 
 </html>

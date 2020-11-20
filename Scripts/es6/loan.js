@@ -45,7 +45,7 @@ const populateList = ((list) => {
 })
 
 document.getElementById("loan-form").addEventListener("click", function (event) {
-    event.preventDefault();
+    console.log('hello')
 })
 
 const calculatePayment = () => {
@@ -94,4 +94,4 @@ document.getElementById("inpMonth").addEventListener("change", function () {
     inpMonth = parseFloat(inpMonth)
 })
 
-onLoad('./deals.json', carList)
+onLoad('../../deals.json', carList);
