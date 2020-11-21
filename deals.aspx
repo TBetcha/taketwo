@@ -14,9 +14,7 @@
 	</head>
 <body>
    <form id="form1" > 
-
 			<!-- Navbar -->
-
       	<!-- Jumbotron -->
 		<div class="jumbotron jumbotron-fluid">
 			<div class="container">
@@ -29,42 +27,17 @@
 		<hr>
 		<div class="container-fluid text-center">
 			<h2 class="display-4">Search for your next bargain</h2>
-			
-     <!--       <div>
-			<asp:DropDownList ID="Sales" runat="server" AutoPostBack=true>
-				<asp:ListItem Value="Car">Car</asp:ListItem>
-				<asp:ListItem Value="Truck">Truck</asp:ListItem>
-				<asp:ListItem Value="Van">Van</asp:ListItem>
-				<asp:ListItem Value="SUV">SUV</asp:ListItem>
-			</asp:DropDownList>
-				<script type ="text/javascript">
-					function	_doPostBack(){
-					filterRestults(ds)
-					}
-                </script>
-			
-            </div> !-->
-
  			<div class="dropdown">
 				<select id="dropdown-me" aria-labelledby="dropdownMenuButton">
-
 					<option class="dropdown-item" value="all" href="#" selected="selected">All</option>
 					<option class="dropdown-item" href="#" value="Car">Car</option>
 					<option class="dropdown-item" href="#" value="SUV">SUV</option>
 					<option class="dropdown-item" href="#" value="Truck">Truck</option>
 					<option class="dropdown-item" href="#" value="Van">Van</option>
-
 				</select>
-	<!--			 <script type="text/javascript">
-					function _doPostBack(){
-						 filterResults($('#dropdown-me').val())
-					 }
-                 </script> -->
 			</div>
 		</div>
-	   
 		<hr>
-
 		<!-- cards row Car-->
 		<div id="vehicles">
 			<h2 class="text-danger display-3 text-center align-baseline" id="list-title">Car</h2>
