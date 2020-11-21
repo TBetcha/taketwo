@@ -14,10 +14,9 @@
   </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-
-      <img src="./img/prod/shopnow.png" alt="whisper" class="img-fluid d-block w-100">
+    <div  class="container">
+      <div class="  col-lg-10 col-md-10 col-sm-10 text-center">
+      <img src="./img/prod/driveaway.png" alt="whisper" class="img-fluid d-block w-80">
         <hr class="my-4">
         </div>
     </div>
@@ -32,13 +31,13 @@
               <asp:ListItem Value="Car Van Truck SUV">All</asp:ListItem>
           </asp:DropDownList>
        </div>
-
+    <hr />
     <!--Select -->
-
-
     <!--Gridview -->
-   
-    <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" Width="502px" DataKeyNames="ID">
+    <div class ="container">
+       <div class="col-lg-12 col-md-12 col-sm-12">
+
+       <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CC9966" BorderStyle="None" BorderWidth="1px" CellPadding="4" Width="502px" DataKeyNames="ID">
         <Columns>
             <asp:CommandField ShowSelectButton="True" />
             <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" />
@@ -91,6 +90,9 @@
             <asp:ControlParameter ControlID="DropDownList1" Name="Type" PropertyName="SelectedValue" Type="String" DefaultValue="Car" />
         </SelectParameters>
     </asp:SqlDataSource>
+ </div> 
+ </div>
+
     <!--Gridview -->
 
 

@@ -179,8 +179,9 @@
     <Content Include="img\prod\bluerx.png" />
     <Content Include="img\prod\bluewrx.jpg" />
     <Content Include="img\prod\browntsx.jpg" />
+    <Content Include="img\prod\driveaway.png" />
     <Content Include="img\prod\redcharger.png" />
-    <Content Include="img\prod\shopnow.png" />
+    <Content Include="img\prod\shopnow2.png" />
     <Content Include="img\prod\silverforte.png" />
     <Content Include="img\prod\silverfusion.jpg" />
     <Content Include="img\prod\silversienna.png" />
