@@ -24,11 +24,10 @@
     <!--Select -->
  	<div class="container-fluid text-center">
         <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
-              <asp:ListItem>SUV</asp:ListItem>
-              <asp:ListItem Selected="True">Car</asp:ListItem>
-              <asp:ListItem>Truck</asp:ListItem>
-              <asp:ListItem>Van</asp:ListItem>
-              <asp:ListItem Value="Car Van Truck SUV">All</asp:ListItem>
+              <asp:ListItem Value="SUV">SUV</asp:ListItem>
+              <asp:ListItem Selected="True" Value="Car">Car</asp:ListItem>
+              <asp:ListItem Value="Truck">Truck</asp:ListItem>
+              <asp:ListItem Value="Van">Van</asp:ListItem>
           </asp:DropDownList>
        </div>
     <hr />
@@ -61,7 +60,7 @@
         <SortedDescendingCellStyle BackColor="#F6F0C0" />
         <SortedDescendingHeaderStyle BackColor="#7E0000" />
     </asp:GridView>
-    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource2" Height="50px" Width="125px" DataKeyNames="ID">
+    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataSourceID="SqlDataSource2" CellPadding="4" Height="50px" Width="125px" DataKeyNames="ID" >
         <Fields>
             <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" InsertVisible="False" ReadOnly="True" Visible="False" />
             <asp:BoundField DataField="Make" HeaderText="Make" SortExpression="Make" />
@@ -77,9 +76,12 @@
                     <asp:Image ID="Image1" runat="server" ImageUrl='<%# (string) FormatUrl((string)Eval("Picture")) %>' />
                 </ItemTemplate>
             </asp:TemplateField>
-
-        </Fields>
-    </asp:DetailsView>
+               </Fields>
+      <FooterStyle BackColor="#FFFFCC" ForeColor="#330099" />
+        <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="#FFFFCC" />
+        <PagerStyle BackColor="#FFFFCC" ForeColor="#330099" HorizontalAlign="Center" />
+        <RowStyle BackColor="White" ForeColor="#330099" />
+           </asp:DetailsView>
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString18 %>" ProviderName="<%$ ConnectionStrings:ConnectionString18.ProviderName %>" SelectCommand="SELECT [ID], [Make], [Model], [Yr], [Mileage], [Color], [Type], [Location], [Price], [Picture] FROM [Sales] WHERE ([ID] = ?)">
         <SelectParameters>
             <asp:ControlParameter ControlID="GridView1" Name="ID" PropertyName="SelectedValue" Type="Int32" />
