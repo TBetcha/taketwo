@@ -47,18 +47,17 @@
             <br>
               <div class="collapse" id="collapseExample">
               <div class="card card-body">
-                <select id="topDealSelect">
+            <select id="topDealSelect">
                   <option>-</option>
                   <option value="Ford Transit">Ford Transit</option>
-                </select>		
-
+                </select>	
        
-   <!--   			<asp:DropDownList ID="Sales" runat="server">
+             <!--  			<asp:DropDownList ID="Sales" runat="server">
 				<asp:ListItem>Car</asp:ListItem>
 				<asp:ListItem>Truck</asp:ListItem>
 				<asp:ListItem>Van</asp:ListItem>
-			</asp:DropDownList>
-	-->
+			</asp:DropDownList>	-->
+	
               </div>
             </div>
             <div class="form-group">
@@ -67,7 +66,7 @@
             </div>
             <div class="form-group">
               <label for="interest">Interest</label>
-              <input type="float" class="form-control" id="inpInterest" value="">
+              <input type="text" class="form-control" id="inpInterest" value="">
             </div>
         </div>
         <div class="form-group">
@@ -82,7 +81,13 @@
           </select>
         </div>
         <div class="form-group  text-center">
-          <button class="btn-attn btn-danger" id="calc-loan">Calculate</button>
+
+                <button class="btn-attn btn-danger" id="calcloan">Calculate</button>
+            <script type="text/javascript">
+                $("calcloan").click(function (e) {
+                    e.preventDefault();
+                });
+            </script>
         </div>
         <div class="form-group">
           <label for="payment">Monthly Payment</label>

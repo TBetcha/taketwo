@@ -68,3 +68,4 @@ const appendResult = () => {
 document.getElementById("dropdown-me").addEventListener("change", filterResults)
 
 onLoad('../../deals.json')
+
